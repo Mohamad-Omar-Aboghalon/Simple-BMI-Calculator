@@ -1,0 +1,144 @@
+/* page background and basic font */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f4e9;
+  margin: 0;
+  padding: 10px;
+  color: #333a45;
+}
+/* the main area */
+.box {
+  max-width: 660px;
+  margin: 8px auto;
+  padding: 10px 14px 8px;
+}
+/* main title */
+h1 {
+  margin-top: 20;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+/* normal text style */
+p {
+  font-size: 14px;
+  margin: 7px 0;
+}
+/* each form line */
+.form-row {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 9px;
+}
+/* labels on the left side */
+label {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+}
+/* text boxes and dropdowns */
+input,
+select {
+  width: 100%;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 18px;
+  color: #333a45;
+}
+/* calculate button */
+button {
+  display: block;
+  margin: 12px auto 0;
+  width: 165px;
+  padding: 9px;
+  border: none;
+  border-radius: 10px;
+  background-color: #333a45;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* result area under the button */
+.result {
+  margin-top: 14px;
+  padding: 10px 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+/* boxes at the bottom */
+.bmi-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+/* each color box */
+.card {
+  min-height: 82px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 6px;
+}
+/* small title inside the card */
+.card span {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+/* bmi range text */
+.card strong {
+  font-size: 16px;
+}
+/* underweight color */
+.blue {
+  background-color: #45a0dc;
+}
+/* healthy color */
+.green {
+  background-color: #4bbc63;
+}
+/* overweight color */
+.orange {
+  background-color: #f7a329;
+}
+/* obese color */
+.red {
+  background-color: #e94a43;
+}
+/* simple phone layout */
+@media (max-width: 700px) {
+  /* stacking the form for smaller screens */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  /* smaller labels on phone */
+  label {
+    font-size: 16px;
+  }
+  /* smaller text inside inputs on phone */
+  input,
+  select {
+    font-size: 16px;
+  }
+  /* cards become 2 per row on phone */
+  .bmi-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* smaller title on phone */
+  h1 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+}

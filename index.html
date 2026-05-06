@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- basic page setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- this is the main box that holds everything -->
+  <div class="box">
+    <!-- main title -->
+    <h1>BMI CALCULATOR</h1>
+    <!-- each row has a label on the left and input on the right -->
+    <div class="form-row">
+      <label for="age">Age</label>
+      <input type="number" id="age" placeholder="21">
+    </div>
+    <!-- gender row -->
+    <div class="form-row">
+      <label for="gender">Gender</label>
+      <select id="gender">
+        <option value="">Choose gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+    <!-- height row -->
+    <div class="form-row">
+      <label for="height">Height</label>
+      <input type="number" id="height" placeholder="170">
+    </div>
+    <!-- weight row -->
+    <div class="form-row">
+      <label for="weight">Weight</label>
+      <input type="number" id="weight" placeholder="75">
+    </div>
+    <!-- button to start the calculation -->
+    <button id="calculateBtn">Calculate</button>
+    <!-- this section shows the final result -->
+    <div class="result">
+      <p id="infoResult">Info: -</p>
+      <p id="bmiResult">Your BMI: -</p>
+      <p id="bmiMessage">Category: -</p>
+      <p id="suggestionResult">Suggestion: -</p>
+    </div>
+    <!-- these are the color boxes at the bottom like the picture -->
+    <div class="bmi-cards">
+      <div class="card blue">
+        <span>UNDERWEIGHT</span>
+        <strong>&lt; 18.5</strong>
+      </div>
+      <div class="card green">
+        <span>HEALTHY</span>
+        <strong>18.5 - 24.9</strong>
+      </div>
+      <div class="card orange">
+        <span>OVERWEIGHT</span>
+        <strong>25 - 29.9</strong>
+      </div>
+      <div class="card red">
+        <span>OBESE</span>
+        <strong>&ge; 30</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- javascript file -->
+  <script src="script.js"></script>
+</body>
+</html>
